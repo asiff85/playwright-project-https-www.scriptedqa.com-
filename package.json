@@ -1,15 +1,30 @@
 {
   "name": "e-commerce-website(scriptedqa.com)",
   "version": "1.0.0",
-  "description": "",
+  "description": "Scripted QA Playwright Cucumber BDD Hybrid Automation Framework",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "scripts": {
+    "test": "npx tsx runner/login.runner.ts",
+    "test:login": "npx tsx runner/login.runner.ts",
+    "test:cucumber": "npx cucumber-js",
+    "test:playwright": "npx playwright test"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "page-object-model",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0",
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.6.4"
+    "@types/node": "^26.6.4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   }
 }

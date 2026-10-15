@@ -1,0 +1,1509 @@
+[
+  {
+    "description": "  As a quality automation engineer\n  I want to verify all authentication, boundary, validation, and security flows\n  So that the login page behaves reliably and securely according to QA specifications",
+    "elements": [
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-pos-01:-successful-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "TC-POS-01: Successful Login with Valid Credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 191941800
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 982396500
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 27093799
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "user enters valid username \"admin\" and password \"Pass@9211\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 77174600
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 9765999
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "user should be redirected to the home dashboard URL \"https://www.scriptedqa.com/home\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 43355899
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the welcome dashboard message \"Welcome back, Automation Engineer!\" should be visible",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 26816599
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@positive",
+            "line": 14
+          },
+          {
+            "name": "@smoke",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-pos-02:-user-sign-out-flow",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "TC-POS-02: User Sign Out Flow",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 112384299
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 396989498
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 19154999
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "user enters valid username \"admin\" and password \"Pass@9211\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37951998
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 11529500
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "user should be redirected to the home dashboard URL \"https://www.scriptedqa.com/home\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 169283299
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "user clicks the Sign Out button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 7813299
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "user should be redirected back to the Login page URL \"https://www.scriptedqa.com/\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 18006599
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "the username and password fields should be reset to blank",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 32689099
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@positive",
+            "line": 21
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-pos-03:-keyboard-form-submission-(enter-key)",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "TC-POS-03: Keyboard Form Submission (Enter Key)",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 102197200
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 411043698
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 20717499
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "user enters username \"admin\" and password \"Pass@9211\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 20455200
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "user submits the login form using the Enter key",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4038099
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "user should be redirected to the home dashboard URL \"https://www.scriptedqa.com/home\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 32199499
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@positive",
+            "line": 30
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-neg:-login-failure-with-invalid-credentials---tc-neg-01",
+        "keyword": "Scenario Outline",
+        "line": 49,
+        "name": "TC-NEG: Login failure with invalid credentials - TC-NEG-01",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 109937500
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 361748600
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 18472798
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "user enters username \"admin\" and password \"WrongPass123!\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 38566199
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 9782100
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "the error message \"Oops! The credentials are incorrect.\" should be displayed",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 9149299
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "user should remain on the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 30565700
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 40
+          },
+          {
+            "name": "@datadriven",
+            "line": 40
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-neg:-login-failure-with-invalid-credentials---tc-neg-02",
+        "keyword": "Scenario Outline",
+        "line": 50,
+        "name": "TC-NEG: Login failure with invalid credentials - TC-NEG-02",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 102255400
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 390386999
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 18350300
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "user enters username \"unknown_user\" and password \"Pass@9211\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37869999
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6598598
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "the error message \"Oops! The credentials are incorrect.\" should be displayed",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 7363000
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "user should remain on the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 35308600
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 40
+          },
+          {
+            "name": "@datadriven",
+            "line": 40
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-neg:-login-failure-with-invalid-credentials---tc-neg-03",
+        "keyword": "Scenario Outline",
+        "line": 51,
+        "name": "TC-NEG: Login failure with invalid credentials - TC-NEG-03",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 110472999
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 384798999
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 16146899
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "user enters username \"\" and password \"\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 35801698
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6978699
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "the error message \"Oops! The credentials are incorrect.\" should be displayed",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 9943499
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "user should remain on the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 29950199
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 40
+          },
+          {
+            "name": "@datadriven",
+            "line": 40
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-neg:-login-failure-with-invalid-credentials---tc-neg-04",
+        "keyword": "Scenario Outline",
+        "line": 52,
+        "name": "TC-NEG: Login failure with invalid credentials - TC-NEG-04",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 100204100
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 391990400
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 26067498
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "user enters username \"Admin\" and password \"pass@9211\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 49670099
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6837699
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "the error message \"Oops! The credentials are incorrect.\" should be displayed",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 8784998
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "user should remain on the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33730299
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 40
+          },
+          {
+            "name": "@datadriven",
+            "line": 40
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-bnd-01:-single-character-input-handling",
+        "keyword": "Scenario",
+        "line": 59,
+        "name": "TC-BND-01: Single Character Input Handling",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 108871999
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 389082899
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 28008300
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 60,
+            "name": "user enters username \"a\" and password \"P\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37440999
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 5340998
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "the error message \"Oops! The credentials are incorrect.\" should be displayed",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 8240998
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "user should remain on the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 30478500
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@boundary",
+            "line": 58
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-bnd-02:-extreme-length-input-string-(255+-characters)",
+        "keyword": "Scenario",
+        "line": 66,
+        "name": "TC-BND-02: Extreme Length Input String (255+ Characters)",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 105140299
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 434927099
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 21985999
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 67,
+            "name": "user enters an extreme length string of 300 characters into credentials fields",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 43690400
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 7504498
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 69,
+            "name": "the application should handle the long input without crashing and display error \"Oops! The credentials are incorrect.\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 8239100
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 70,
+            "name": "user should remain on the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 31663300
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@boundary",
+            "line": 65
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-bnd-03:-leading-and-trailing-whitespaces-handling",
+        "keyword": "Scenario",
+        "line": 73,
+        "name": "TC-BND-03: Leading and Trailing Whitespaces Handling",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 110973300
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 389599598
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 16206798
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 74,
+            "name": "user enters username \"  admin  \" and password \"  Pass@9211  \"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33042800
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 10382100
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 76,
+            "name": "the error message \"Oops! The credentials are incorrect.\" should be displayed",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 7711199
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 77,
+            "name": "user should remain on the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 34760700
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@boundary",
+            "line": 72
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-val-01:-password-input-type-masking",
+        "keyword": "Scenario",
+        "line": 84,
+        "name": "TC-VAL-01: Password Input Type Masking",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 109937799
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 374735900
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4571099
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 85,
+            "name": "the password input field must have attribute \"type\" equal to \"password\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 25546899
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@validation",
+            "line": 83
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-val-02:-input-placeholder-and-focus-state-verification",
+        "keyword": "Scenario",
+        "line": 88,
+        "name": "TC-VAL-02: Input Placeholder and Focus State Verification",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 98053100
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 346091799
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3534898
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 89,
+            "name": "the username input should display placeholder \"Username\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4615598
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 90,
+            "name": "the password input should display placeholder \"Password\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 9255899
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 91,
+            "name": "user focuses on the username input field",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3612999
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 92,
+            "name": "the username input field should have active focus",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 32779599
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@validation",
+            "line": 87
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-sec:-protection-against-unauthorized-payloads---tc-sec-01",
+        "keyword": "Scenario Outline",
+        "line": 107,
+        "name": "TC-SEC: Protection against unauthorized payloads - TC-SEC-01",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 105175199
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 386950199
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 21415498
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 100,
+            "name": "user enters security payload username \"' OR '1'='1\" and password \"' OR '1'='1\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 46909500
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 101,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6284599
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "the authentication attempt should be denied with error \"Oops! The credentials are incorrect.\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 8143500
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 103,
+            "name": "user should remain on the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 28866099
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@security",
+            "line": 98
+          },
+          {
+            "name": "@datadriven",
+            "line": 98
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-sec:-protection-against-unauthorized-payloads---tc-sec-02",
+        "keyword": "Scenario Outline",
+        "line": 108,
+        "name": "TC-SEC: Protection against unauthorized payloads - TC-SEC-02",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 102219799
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 399253799
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 17529198
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 100,
+            "name": "user enters security payload username \"<script>alert('xss')</script>\" and password \"<img src=x onerror=alert(1)>\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36140599
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 101,
+            "name": "user clicks the Sign In button",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 5280098
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "the authentication attempt should be denied with error \"Oops! The credentials are incorrect.\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 7827998
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 103,
+            "name": "user should remain on the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 31368600
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@security",
+            "line": 98
+          },
+          {
+            "name": "@datadriven",
+            "line": 98
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "scripted-qa-login-page-functionality;tc-sec-03:-unauthenticated-direct-url-access-protection",
+        "keyword": "Scenario",
+        "line": 111,
+        "name": "TC-SEC-03: Unauthenticated Direct URL Access Protection",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 119370200
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 357588400
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to the Login page",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 359127499
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 112,
+            "name": "user attempts to navigate directly to protected route \"https://www.scriptedqa.com/home\" without authenticating",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 21752698
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 113,
+            "name": "user should be redirected back to the Login page URL \"https://www.scriptedqa.com/\"",
+            "match": {
+              "location": "..\\E-Commerce WebsitescriptedQA.com\\node_modules\\@cucumber\\cucumber\\src\\support_code_library_builder\\get_definition_line_and_uri.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 25867299
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@security",
+            "line": 110
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "scripted-qa-login-page-functionality",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Scripted QA Login Page Functionality",
+    "tags": [
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "uri": "features\\login.feature"
+  }
+]

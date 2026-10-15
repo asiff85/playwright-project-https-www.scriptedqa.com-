@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playwright Extent Report - Scripted QA Automation</title>
+  <style>
+    :root {
+      --bg: #1e1e2f;
+      --card-bg: #27293d;
+      --text: #ffffff;
+      --text-muted: #9a9a9a;
+      --pass: #00bf9a;
+      --fail: #fd5d93;
+      --border: #383a59;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 24px; }
+    .header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+    .header h1 { font-size: 24px; color: #fff; }
+    .header .timestamp { color: var(--text-muted); font-size: 14px; }
+    .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: var(--card-bg); padding: 20px; border-radius: 8px; border: 1px solid var(--border); }
+    .stat-card .label { font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-card .value { font-size: 28px; font-weight: bold; margin-top: 8px; }
+    .stat-card.pass .value { color: var(--pass); }
+    .stat-card.fail .value { color: var(--fail); }
+    .test-list { display: flex; flex-direction: column; gap: 12px; }
+    .test-card { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border); overflow: hidden; }
+    .card-header { padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+    .card-header:hover { background: rgba(255, 255, 255, 0.03); }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .header-right { display: flex; align-items: center; gap: 16px; color: var(--text-muted); font-size: 14px; }
+    .badge { padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+    .badge-pass { background: rgba(0, 191, 154, 0.15); color: var(--pass); border: 1px solid var(--pass); }
+    .badge-fail { background: rgba(253, 93, 147, 0.15); color: var(--fail); border: 1px solid var(--fail); }
+    .test-title { font-size: 15px; font-weight: 600; }
+    .card-body { padding: 0 20px 20px 20px; border-top: 1px solid var(--border); }
+    .steps-container { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .step-item { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-radius: 4px; background: rgba(0,0,0,0.2); font-size: 14px; }
+    .step-time { margin-left: auto; color: var(--text-muted); font-size: 12px; }
+    .error-stack { margin-top: 8px; padding: 12px; background: #1a1a24; color: #ff79c6; border-radius: 4px; font-size: 12px; overflow-x: auto; width: 100%; }
+  </style>
+  <script>
+    function toggleDetails(id) {
+      const body = document.getElementById('body-' + id);
+      const icon = document.getElementById('toggle-' + id);
+      if (body.style.display === 'none') {
+        body.style.display = 'block';
+        icon.innerText = '▲';
+      } else {
+        body.style.display = 'none';
+        icon.innerText = '▼';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>Extent Automation Execution Report</h1>
+      <div class="timestamp">Platform: Google Chrome (Desktop) | Suite: Login Page BDD Hybrid Framework</div>
+    </div>
+    <div class="timestamp">Generated on: 10/15/2026, 11:59:53 AM</div>
+  </div>
+
+  <div class="dashboard">
+    <div class="stat-card">
+      <div class="label">Total Scenarios</div>
+      <div class="value">15</div>
+    </div>
+    <div class="stat-card pass">
+      <div class="label">Passed Scenarios</div>
+      <div class="value">15</div>
+    </div>
+    <div class="stat-card fail">
+      <div class="label">Failed Scenarios</div>
+      <div class="value">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Pass Rate</div>
+      <div class="value">100%</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Total Execution Time</div>
+      <div class="value">10.11s</div>
+    </div>
+  </div>
+
+  <div class="test-list">
+    
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(0)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-POS-01: Successful Login with Valid Credentials</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">1.36s</span>
+              <span class="toggle-icon" id="toggle-0">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-0" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">192ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">982ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters valid username "admin" and password "Pass@9211"</span>
+            <span class="step-time">27ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">77ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">user should be redirected to the home dashboard URL "https://www.scriptedqa.com/home"</span>
+            <span class="step-time">10ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">the welcome dashboard message "Welcome back, Automation Engineer!" should be visible</span>
+            <span class="step-time">43ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">27ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(1)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-POS-02: User Sign Out Flow</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.81s</span>
+              <span class="toggle-icon" id="toggle-1">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-1" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">112ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">397ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters valid username "admin" and password "Pass@9211"</span>
+            <span class="step-time">19ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">38ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">user should be redirected to the home dashboard URL "https://www.scriptedqa.com/home"</span>
+            <span class="step-time">12ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user clicks the Sign Out button</span>
+            <span class="step-time">169ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">user should be redirected back to the Login page URL "https://www.scriptedqa.com/"</span>
+            <span class="step-time">8ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">the username and password fields should be reset to blank</span>
+            <span class="step-time">18ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">33ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(2)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-POS-03: Keyboard Form Submission (Enter Key)</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.59s</span>
+              <span class="toggle-icon" id="toggle-2">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-2" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">102ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">411ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters username "admin" and password "Pass@9211"</span>
+            <span class="step-time">21ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user submits the login form using the Enter key</span>
+            <span class="step-time">20ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">user should be redirected to the home dashboard URL "https://www.scriptedqa.com/home"</span>
+            <span class="step-time">4ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">32ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(3)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-NEG: Login failure with invalid credentials - TC-NEG-01</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.58s</span>
+              <span class="toggle-icon" id="toggle-3">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-3" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">110ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">362ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters username "admin" and password "WrongPass123!"</span>
+            <span class="step-time">18ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">39ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the error message "Oops! The credentials are incorrect." should be displayed</span>
+            <span class="step-time">10ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user should remain on the Login page</span>
+            <span class="step-time">9ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">31ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(4)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-NEG: Login failure with invalid credentials - TC-NEG-02</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.60s</span>
+              <span class="toggle-icon" id="toggle-4">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-4" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">102ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">390ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters username "unknown_user" and password "Pass@9211"</span>
+            <span class="step-time">18ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">38ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the error message "Oops! The credentials are incorrect." should be displayed</span>
+            <span class="step-time">7ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user should remain on the Login page</span>
+            <span class="step-time">7ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">35ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(5)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-NEG: Login failure with invalid credentials - TC-NEG-03</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.59s</span>
+              <span class="toggle-icon" id="toggle-5">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-5" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">110ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">385ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters username "" and password ""</span>
+            <span class="step-time">16ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">36ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the error message "Oops! The credentials are incorrect." should be displayed</span>
+            <span class="step-time">7ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user should remain on the Login page</span>
+            <span class="step-time">10ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">30ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(6)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-NEG: Login failure with invalid credentials - TC-NEG-04</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.62s</span>
+              <span class="toggle-icon" id="toggle-6">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-6" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">100ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">392ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters username "Admin" and password "pass@9211"</span>
+            <span class="step-time">26ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">50ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the error message "Oops! The credentials are incorrect." should be displayed</span>
+            <span class="step-time">7ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user should remain on the Login page</span>
+            <span class="step-time">9ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">34ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(7)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-BND-01: Single Character Input Handling</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.61s</span>
+              <span class="toggle-icon" id="toggle-7">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-7" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">109ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">389ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters username "a" and password "P"</span>
+            <span class="step-time">28ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">37ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the error message "Oops! The credentials are incorrect." should be displayed</span>
+            <span class="step-time">5ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user should remain on the Login page</span>
+            <span class="step-time">8ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">30ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(8)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-BND-02: Extreme Length Input String (255+ Characters)</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.65s</span>
+              <span class="toggle-icon" id="toggle-8">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-8" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">105ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">435ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters an extreme length string of 300 characters into credentials fields</span>
+            <span class="step-time">22ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">44ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the application should handle the long input without crashing and display error "Oops! The credentials are incorrect."</span>
+            <span class="step-time">8ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user should remain on the Login page</span>
+            <span class="step-time">8ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">32ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(9)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-BND-03: Leading and Trailing Whitespaces Handling</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.60s</span>
+              <span class="toggle-icon" id="toggle-9">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-9" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">111ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">390ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters username "  admin  " and password "  Pass@9211  "</span>
+            <span class="step-time">16ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">33ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the error message "Oops! The credentials are incorrect." should be displayed</span>
+            <span class="step-time">10ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user should remain on the Login page</span>
+            <span class="step-time">8ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">35ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(10)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-VAL-01: Password Input Type Masking</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.52s</span>
+              <span class="toggle-icon" id="toggle-10">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-10" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">110ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">375ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the password input field must have attribute "type" equal to "password"</span>
+            <span class="step-time">5ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">26ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(11)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-VAL-02: Input Placeholder and Focus State Verification</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.50s</span>
+              <span class="toggle-icon" id="toggle-11">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-11" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">98ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">346ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the username input should display placeholder "Username"</span>
+            <span class="step-time">4ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">the password input should display placeholder "Password"</span>
+            <span class="step-time">5ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user focuses on the username input field</span>
+            <span class="step-time">9ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the username input field should have active focus</span>
+            <span class="step-time">4ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">33ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(12)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-SEC: Protection against unauthorized payloads - TC-SEC-01</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.60s</span>
+              <span class="toggle-icon" id="toggle-12">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-12" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">105ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">387ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters security payload username "' OR '1'='1" and password "' OR '1'='1"</span>
+            <span class="step-time">21ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">47ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the authentication attempt should be denied with error "Oops! The credentials are incorrect."</span>
+            <span class="step-time">6ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user should remain on the Login page</span>
+            <span class="step-time">8ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">29ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(13)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-SEC: Protection against unauthorized payloads - TC-SEC-02</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.60s</span>
+              <span class="toggle-icon" id="toggle-13">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-13" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">102ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">399ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user enters security payload username "<script>alert('xss')</script>" and password "<img src=x onerror=alert(1)>"</span>
+            <span class="step-time">18ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user clicks the Sign In button</span>
+            <span class="step-time">36ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">the authentication attempt should be denied with error "Oops! The credentials are incorrect."</span>
+            <span class="step-time">5ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>And </b></span>
+            <span class="step-name">user should remain on the Login page</span>
+            <span class="step-time">8ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">31ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <div class="test-card passed">
+          <div class="card-header" onclick="toggleDetails(14)">
+            <div class="header-left">
+              <span class="badge badge-pass">PASSED</span>
+              <span class="test-title">TC-SEC-03: Unauthenticated Direct URL Access Protection</span>
+            </div>
+            <div class="header-right">
+              <span class="duration">0.88s</span>
+              <span class="toggle-icon" id="toggle-14">▼</span>
+            </div>
+          </div>
+          <div class="card-body" id="body-14" style="display: none;">
+            <div class="steps-container">
+              
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Before</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">119ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Given </b></span>
+            <span class="step-name">user navigates to the Login page</span>
+            <span class="step-time">358ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>When </b></span>
+            <span class="step-name">user attempts to navigate directly to protected route "https://www.scriptedqa.com/home" without authenticating</span>
+            <span class="step-time">359ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>Then </b></span>
+            <span class="step-name">user should be redirected back to the Login page URL "https://www.scriptedqa.com/"</span>
+            <span class="step-time">22ms</span>
+            
+          </div>
+        
+          <div class="step-item passed">
+            <span class="step-icon">✅</span>
+            <span class="step-keyword"><b>After</b></span>
+            <span class="step-name"></span>
+            <span class="step-time">26ms</span>
+            
+          </div>
+        
+            </div>
+          </div>
+        </div>
+      
+  </div>
+</body>
+</html>

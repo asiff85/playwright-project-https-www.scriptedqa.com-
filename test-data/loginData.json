@@ -1,0 +1,51 @@
+{
+  "baseUrl": "https://www.scriptedqa.com/",
+  "homeUrl": "https://www.scriptedqa.com/home",
+  "validCredentials": {
+    "username": "admin",
+    "password": "Pass@9211"
+  },
+  "invalidCredentials": {
+    "wrongPassword": {
+      "username": "admin",
+      "password": "WrongPass123!"
+    },
+    "unknownUser": {
+      "username": "unknown_user",
+      "password": "Pass@9211"
+    },
+    "blankCredentials": {
+      "username": "",
+      "password": ""
+    },
+    "caseSensitive": {
+      "username": "Admin",
+      "password": "pass@9211"
+    }
+  },
+  "boundaryData": {
+    "singleCharacter": {
+      "username": "a",
+      "password": "P"
+    },
+    "leadingTrailingWhitespace": {
+      "username": "  admin  ",
+      "password": "  Pass@9211  "
+    }
+  },
+  "securityPayloads": {
+    "sqlInjection": {
+      "username": "' OR '1'='1",
+      "password": "' OR '1'='1"
+    },
+    "xss": {
+      "username": "<script>alert('xss')</script>",
+      "password": "<img src=x onerror=alert(1)>"
+    }
+  },
+  "expectedMessages": {
+    "invalidCredentialsError": "Oops! The credentials are incorrect.",
+    "welcomeDashboardHeader": "Welcome back, Automation Engineer!"
+  }
+}
+
